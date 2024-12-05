@@ -1,3 +1,5 @@
+# Spelling Correction
+
 <!-- toc start: 3 [do not erase this comment] -->
 **Table of contents**
 - [Spelling Correction](#spelling-correction)
@@ -7,9 +9,18 @@
 - [Author](#author)
 <!-- toc end [do not erase this comment] -->
 
-# Spelling Correction
+# Intro
 
 This repository provides an implementation of a Spell Checker leveraging the power of NLTK and NumPy. The project is designed to efficiently detect and correct spelling errors in text using probabilistic models and distance-based algorithms. This project is divided in two different python source code, one dedicated to the `Levenshtein edit distance` and the other to apply the **Spelling correction** using: *preprocessing, Levenshtein edit distance* and a *naive probability approach*.
+
+## Main steps for spelling correction
+
+1. Find misspelled words into the query
+1. Compute edit distance among query and each term in the vocabulary
+1. Store the candidates
+1. Compute the probability for each candidate
+1. Pick the candidate with higher probability
+1. Replace the misspelled term with the founded candidate
 
 # How to use
 
